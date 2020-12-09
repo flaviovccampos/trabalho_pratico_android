@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TrabalhoPraticoAndroid</string>
+    <string name="main_title">Calculadora de Salário Liquido</string>
+    <string name="full_payment">Salário Bruto</string>
+    <string name="dependents_number">Qtd de Dependentes</string>
+    <string name="other_discounts">Outros Discontos</string>
+    <string name="money_identifier">R$</string>
+    <string name="hint_money_value">0,00</string>
+    <string name="hint_zero">0</string>
+    <string name="calculate">Calcular</string>
+    <string name="result_title">Resultado</string>
+    <string name="inss">INSS</string>
+    <string name="irrf">IRRF</string>
+    <string name="liquid_payment">Salário Líquido</string>
+    <string name="discounts">Descontos</string>
+    <string name="back">Voltar</string>
+</resources>

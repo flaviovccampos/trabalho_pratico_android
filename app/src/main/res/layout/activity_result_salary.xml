@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ResultSalary">
+
+    <!--Title-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitleMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="@string/result_title"
+        android:textColor="#1B1B1B"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--GuideLine-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glMiddle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <!--Salário Bruto - Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFullPayment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="@string/full_payment"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/glMiddle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleMain" />
+
+    <!--Salario Bruto Result - Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFullPaymentResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvFullPayment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/glMiddle"
+        app:layout_constraintTop_toTopOf="@id/tvFullPayment"
+        tools:text="5.000,00" />
+
+
+    <!--INSS - Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvINSS"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/inss"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/glMiddle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFullPayment" />
+
+    <!--INSS Result - Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvINSSResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvINSS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/glMiddle"
+        app:layout_constraintTop_toTopOf="@id/tvINSS"
+        tools:text="-500,00" />
+
+
+    <!--IRRF - Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvIRRF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/irrf"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/glMiddle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvINSS" />
+
+    <!--IRRF Result - Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvIRRFResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvIRRF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/glMiddle"
+        app:layout_constraintTop_toTopOf="@id/tvIRRF"
+        tools:text="-500,00" />
+
+
+    <!--Outros Descontos - Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOtherDiscounts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/other_discounts"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/glMiddle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvIRRF" />
+
+    <!--Outros Descontos Result - Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOtherDiscountsResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvOtherDiscounts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/glMiddle"
+        app:layout_constraintTop_toTopOf="@id/tvOtherDiscounts"
+        tools:text="-0,00" />
+
+
+    <!--Salário Liquido - Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLiquidPayment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="@string/liquid_payment"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/glMiddle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvOtherDiscounts" />
+
+    <!--Salario Liquido Result - Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLiquidPaymentResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvLiquidPayment"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/glMiddle"
+        app:layout_constraintTop_toTopOf="@id/tvLiquidPayment"
+        tools:text="5.000,00" />
+
+
+    <!--Discounts - Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDiscounts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/discounts"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@id/glMiddle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvLiquidPayment" />
+
+    <!--Salario Liquido Result - Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDiscountsResult"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvDiscounts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/glMiddle"
+        app:layout_constraintTop_toTopOf="@id/tvDiscounts"
+        tools:text="5.000,00" />
+
+
+    <!--Botao Voltar-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:background="#3A3A3A"
+        android:text="@string/back"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:paddingStart="24sp"
+        android:paddingEnd="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDiscounts"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!--Title-->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitleMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="@string/main_title"
+        android:textColor="#1B1B1B"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--GuideLine-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/glMiddle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <!--Salário Bruto - Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvFullPayment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="@string/full_payment"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/glMiddle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleMain" />
+
+    <!--R$ - Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMoneyIdentifierFP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/money_identifier"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvFullPayment"
+        app:layout_constraintStart_toEndOf="@id/glMiddle"
+        app:layout_constraintTop_toTopOf="@id/tvFullPayment" />
+
+    <!--Salário Bruto - EditText -->
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etFullPayment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/bkg_edit_text"
+        android:hint="@string/hint_money_value"
+        android:inputType="numberDecimal"
+        android:padding="4dp"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toBottomOf="@id/tvMoneyIdentifierFP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvMoneyIdentifierFP"
+        app:layout_constraintTop_toTopOf="@id/tvMoneyIdentifierFP" />
+
+
+    <!--Qtd Dependentes - Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDependentsNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/dependents_number"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/glMiddle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvFullPayment" />
+
+    <!--Qtd Dependentes - EditText -->
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etDependentsNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bkg_edit_text"
+        android:inputType="number"
+        android:padding="4dp"
+        android:hint="@string/hint_zero"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toBottomOf="@id/tvDependentsNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/etFullPayment"
+        app:layout_constraintTop_toTopOf="@id/tvDependentsNumber" />
+
+
+    <!--Outros Discontos - Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvOtherDiscounts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/other_discounts"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/glMiddle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDependentsNumber" />
+
+    <!--R$ - Text -->
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvMoneyIdentifierOD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/money_identifier"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvOtherDiscounts"
+        app:layout_constraintStart_toEndOf="@id/glMiddle"
+        app:layout_constraintTop_toTopOf="@id/tvOtherDiscounts" />
+
+    <!--Outros Discontos - EditText -->
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etOtherDiscounts"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/bkg_edit_text"
+        android:hint="@string/hint_money_value"
+        android:inputType="numberDecimal"
+        android:padding="4dp"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toBottomOf="@id/tvMoneyIdentifierOD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvMoneyIdentifierOD"
+        app:layout_constraintTop_toTopOf="@id/tvMoneyIdentifierOD" />
+
+    <!--Botao Calcular-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCalculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:background="#3A3A3A"
+        android:text="@string/calculate"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:paddingStart="24sp"
+        android:paddingEnd="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvMoneyIdentifierOD"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
